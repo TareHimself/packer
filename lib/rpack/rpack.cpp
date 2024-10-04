@@ -1,7 +1,7 @@
 #define STB_RECT_PACK_IMPLEMENTATION
-#include <rectpack/rectpack.hpp>
+#include <rpack/rpack.hpp>
 
-namespace rectpack
+namespace rpack
 {
     Packer::Packer(int width, int height, int padding)
     {

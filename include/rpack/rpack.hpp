@@ -2,7 +2,7 @@
 #include <vector>
 #include <optional>
 #include <stb/stb_rect_pack.h>
-namespace rectpack
+namespace rpack
 {
     
     class Packer
