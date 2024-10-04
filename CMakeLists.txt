@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.27)
 
 set(CMAKE_CXX_STANDARD 20)
 
-project(rectpack VERSION 1.0.0 LANGUAGES CXX)
+project(rpack VERSION 1.0.0 LANGUAGES CXX)
 
 option(BUILD_DEV "Build Dev Project" ${PROJECT_IS_TOP_LEVEL})
 
@@ -24,9 +24,9 @@ if(MSVC)
 endif()
 
 if(BUILD_DEV)
-        add_executable(rectpack_test ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
-        set_target_properties(rectpack_test PROPERTIES OUTPUT_NAME "scriptpp")
-        target_link_libraries(rectpack_test ${PROJECT_NAME})  
+        add_executable(${PROJECT_NAME}_test ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
+        set_target_properties(${PROJECT_NAME}_test PROPERTIES OUTPUT_NAME "scriptpp")
+        target_link_libraries(${PROJECT_NAME}_test ${PROJECT_NAME})  
 endif()
 
 
