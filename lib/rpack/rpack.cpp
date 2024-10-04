@@ -3,6 +3,11 @@
 
 namespace rpack
 {
+    Packer::Packer() : Packer(0,0,0)
+    {
+        
+    }
+
     Packer::Packer(int width, int height, int padding)
     {
         _padding = padding;
@@ -28,9 +33,19 @@ namespace rpack
         return id;
     }
 
-    std::vector<Packer::Rect> Packer::GetRects() const
+    std::vector<Packer::Rect>& Packer::GetRects()
     {
         return _rects;
+    }
+
+    int Packer::GetWidth() const
+    {
+        return _context.width;
+    }
+
+    int Packer::GetHeight() const
+    {
+        return _context.height;
     }
 
     // std::o Packer::Pack(int width, int height)

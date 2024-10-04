@@ -23,10 +23,14 @@ namespace rpack
         int _padding = 0;
 
     public:
+        Packer();
         Packer(int width, int height,int padding = 0);
 
         std::optional<int> Pack(int width,int height);
 
-        std::vector<Rect> GetRects() const;
+        std::vector<Rect>& GetRects();
+
+        int GetWidth() const;
+        int GetHeight() const;
     };
 }
