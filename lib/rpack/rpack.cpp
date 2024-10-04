@@ -28,7 +28,7 @@ namespace rpack
             return {};
         }
         
-        _rects.emplace_back(id,rect.x - _padding,rect.y - _padding,rect.w - padding2x,rect.h - padding2x);
+        _rects.emplace_back(id,rect.x + _padding,rect.y + _padding,rect.w - padding2x,rect.h - padding2x);
         
         return id;
     }
